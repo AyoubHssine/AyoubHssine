@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="UA-X-Compatible" content="IE=edge">
+    <title>Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins');
+        video {
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100%;
+            position: fixed;
+            z-index: -1;
+            object-fit: cover;
+            overflow: hidden;
+        }
+    html {
+  scroll-behavior: smooth;
+  scrollbar-shadow-color: #b39b02;
+}
+
+        .header-elements {
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+        }
+        a {
+            text-decoration: none;
+            color: aliceblue;
+            font-size: 18px;
+        }
+        body {
+            margin: 0;
+            padding: 0; 
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+            color: white;
+            overflow-y: scroll;
+        }
+        h1 {
+            font-size: 50px;
+        }
+        #name {
+            color: yellow;
+            font-family: 'cursive', serif;
+            font-size: 56px;
+            font-weight: 500;
+        }
+        h2 {
+            font-size: 40px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: bold;
+            color: yellow;
+        }
+        .header-elements span {
+            color: yellow;
+        }
+        #button-1 {
+            width: 150px;
+            height: 50px;
+            background: transparent;
+            border: 2px solid;
+            border-radius: 10px;
+            border-color: rgb(248, 247, 247);
+            margin-top: 15px;
+            padding: 10px;
+            text-align: center;
+            font-weight: 600;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        #button-1:hover {
+            background: #b39b02; 
+            color: #1c1f26;
+        }
+        #button-2 {
+            width: 150px;
+            height: 50px;
+            background: transparent;
+            border: 2px solid;
+            border-radius: 10px;
+            border-color: yellow;
+            margin-top: 15px;
+            margin-left: 20px;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+        #aboutme {
+            font-size: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+        }
+        .cards-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            margin-top: 30px;
+            max-width: 85%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .card {
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            padding: 20px;
+            width: 45%;
+            text-align: center;
+            color: white;
+            font-size: 20px;
+            font-weight: 300;
+        }
+        .card h3 {
+            font-size: 30px;
+            font-weight: bold;
+            color: yellow;
+        }
+        
+        details summary {
+            color: yellow;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+#readmore{
+text-align: center;
+
+
+
+
+}
+
+    </style>
+</head>
+<body>
+    <video loop muted autoplay preload="auto" playsinline>
+        <source src="https://videos.pexels.com/video-files/8888818/8888818-uhd_2732_1440_25fps.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <header id="Home">
+        <div class="header-elements" id="home-page" style="position: fixed;top: 0;left: 35%;">
+            <a href="#Home"><strong><span>Home</span></strong></a>
+            <a href="#abt"><strong>About</strong></a>
+            <a href="#sks"><strong>Skills</strong></a>
+            <a href="#pjcts"><strong>Projects</strong></a>
+            <a href="#"><strong>Services</strong></a>
+            <a href="#"><strong>Contact</strong></a>
+        </div>
+    </header>
+    <section style="margin-left: 200px; margin-top: 200px;">
+        <h1>Hello everyone, I'm <span id="name">Ayoub Hssine</span></h1>
+        <h2>I'm a Computer Science Student</h2>
+        <p style="width: 30%;">A first-year computer science student with a strong passion for learning and an interest in understanding how computers function. Focused on problem-solving and eager to apply skills to real-world challenges, with a commitment to growth in the tech field.</p>
+        <button type="button" id="button-1"><a href="#">Hire me</a></button>
+        <button type="button" id="button-2"><a href="#">Contact</a></button>
+    </section>
+    <section class="ultimate-container" style="margin-top: 360px;">
+        <div class="cards-container" style="display: flex;flex-direction: column;align-items: center;">
+            <div class="card" id="abt" style="width: 1200px;text-align: left;">
+                <span style="text-align: center;"><h3>About Me</h3></span>
+                <details>
+                    <summary>Read More</summary>
+                    <p>Étudiant en informatique passionné par l’innovation technologique, avec une solide maîtrise des bases en développement web. J’explore également le design graphique et suis habile avec les outils bureautiques.</p>
+                </details>
+            </div>
+            <div class="card " id="sks" style="text-align: left;width: 1200px;">
+                <span style="text-align: center;"><h3>Skills</h3></span>
+                <details>
+                    <summary>Read More</summary>
+                    <p>
+                        <ul>
+                            <li>HTML: Capable of structuring web pages with semantic tags and interactive elements.</li>
+                            <li>CSS: Expert in Flexbox, Grid, and creating responsive layouts.</li>
+                            <li>Graphic Design: Proficient in tools like Photoshop and Canva.</li>
+                            <li>Office Tools: Advanced skills in Word, Excel, and PowerPoint.</li>
+                            <li>Basic Networking: Knowledge of IP, DHCP, and configuring local networks.</li>
+                        </ul>
+                    </p>
+                </details>
+            </div>
+            <div class="card" id="pjcts" style="width: 1200px;text-align: left;">
+                <span style="text-align: center;"><h3>Projects</h3></span>
+                <details>
+                    <summary><span>Read More</span></summary>
+                    <p>
+                        <ul>
+                            <li>Website designs using HTML and CSS.</li>
+                            <li>Graphic design projects applying modern aesthetics.</li>
+                            <li>Automation using Excel and other office tools.</li>
+                        </ul>
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
