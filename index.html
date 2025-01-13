@@ -7,6 +7,27 @@
     <title>Portfolio</title>
     <style>
         @import url('https://fonts.googleapis.com/css?family=Poppins');
+        
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scrollbar-shadow-color: #b39b02;
+        }
+
+        body {
+            margin: 0;
+            padding: 0; 
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            overflow-x: hidden;
+        }
+
         video {
             top: 0;
             left: 0;
@@ -15,13 +36,9 @@
             position: fixed;
             z-index: -1;
             object-fit: cover;
-            overflow: hidden;
         }
-    html {
-  scroll-behavior: smooth;
-  scrollbar-shadow-color: #b39b02;
-}
 
+        
         .header-elements {
             display: flex;
             flex-direction: row;
@@ -30,114 +47,251 @@
             justify-content: center;
             align-items: center;
             padding: 15px;
+            background: rgba(0, 0, 0, 0.8);
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
         }
+
         a {
             text-decoration: none;
             color: aliceblue;
             font-size: 18px;
         }
-        body {
-            margin: 0;
-            padding: 0; 
-            font-family: 'Poppins', sans-serif;
-            box-sizing: border-box;
-            color: white;
-            overflow-y: scroll;
-        }
+
         h1 {
             font-size: 50px;
         }
+
         #name {
             color: yellow;
             font-family: 'cursive', serif;
             font-size: 56px;
             font-weight: 500;
         }
+
         h2 {
             font-size: 40px;
             font-family: 'Poppins', sans-serif;
             font-weight: bold;
             color: yellow;
         }
+
         .header-elements span {
             color: yellow;
         }
-        #button-1 {
+
+       
+        #button-1, #button-2 {
             width: 150px;
             height: 50px;
             background: transparent;
             border: 2px solid;
             border-radius: 10px;
-            border-color: rgb(248, 247, 247);
             margin-top: 15px;
             padding: 10px;
             text-align: center;
             font-weight: 600;
+            cursor: pointer;
+        }
+
+        #button-1 {
+            border-color: rgb(248, 247, 247);
             transition: background 0.3s ease, color 0.3s ease;
         }
+
+        #button-2 {
+            border-color: yellow;
+            margin-left: 20px;
+        }
+
         #button-1:hover {
-            background: #b39b02; 
+            background: #b39b02;
             color: #1c1f26;
         }
-        #button-2 {
-            width: 150px;
-            height: 50px;
-            background: transparent;
-            border: 2px solid;
-            border-radius: 10px;
-            border-color: yellow;
-            margin-top: 15px;
-            margin-left: 20px;
-            padding: 10px;
-            text-align: center;
-            font-weight: bold;
+
+        #button-2:hover {
+            background: #b39b02;
+            color: #1c1f26;
         }
-        #aboutme {
-            font-size: 50px;
-            font-family: 'Poppins', sans-serif;
-            font-weight: bold;
-            color: rgb(255, 255, 255);
+        #button-2:hover::after {
+           
+            width: 100%;
         }
+
+       
         .cards-container {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
             gap: 40px;
             margin-top: 30px;
-            max-width: 85%;
+            width: 90%;
+            max-width: 1200px;
             margin-left: auto;
             margin-right: auto;
         }
+
         .card {
             background-color: rgba(0, 0, 0, 0.6);
             border-radius: 10px;
             padding: 20px;
-            width: 45%;
-            text-align: center;
+            width: 100%;
+            text-align: left;
             color: white;
             font-size: 20px;
             font-weight: 300;
         }
+
         .card h3 {
             font-size: 30px;
             font-weight: bold;
             color: yellow;
+            text-align: center;
         }
+
         
+        details {
+            margin-top: 15px;
+        }
+
         details summary {
             color: yellow;
             font-weight: bold;
             cursor: pointer;
+            padding: 10px 20px;
             margin-top: 10px;
         }
 
-#readmore{
-text-align: center;
+        details > p {
+            padding: 20px 30px;
+        }
 
+        details > ul {
+            padding: 20px 50px;
+        }
 
+        details li {
+            margin-bottom: 10px;
+        }
 
+        
+        .header-elements a:hover {
+            color: #b39b02;
+            text-decoration: underline;
+            text-underline-offset: 10px;
+        }
 
-}
+        
+        @media screen and (max-width: 1024px) {
+            .header-elements {
+                gap: 20px;
+            }
 
+            h1 {
+                font-size: 40px;
+            }
+
+            #name {
+                font-size: 46px;
+            }
+
+            h2 {
+                font-size: 32px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .header-elements {
+                flex-wrap: wrap;
+                gap: 15px;
+                padding: 10px;
+            }
+
+            section {
+                margin-left: 20px !important;
+                margin-right: 20px;
+                margin-top: 150px !important;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            #name {
+                font-size: 38px;
+            }
+
+            h2 {
+                font-size: 28px;
+            }
+
+            p {
+                width: 100% !important;
+            }
+
+            .card {
+                font-size: 16px;
+            }
+
+            .card h3 {
+                font-size: 24px;
+            }
+
+            details > p {
+                padding: 15px 20px;
+            }
+
+            details > ul {
+                padding: 15px 35px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .header-elements {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            #button-1, #button-2 {
+                width: 120px;
+                height: 40px;
+                font-size: 14px;
+            }
+
+            #button-2 {
+                margin-left: 10px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            #name {
+                font-size: 32px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            .ultimate-container {
+                margin-top: 260px !important;
+            }
+
+            details > p {
+                padding: 10px 15px;
+            }
+
+            details > ul {
+                padding: 10px 25px;
+            }
+
+            details summary {
+                padding: 8px 15px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -146,8 +300,8 @@ text-align: center;
         Your browser does not support the video tag.
     </video>
     <header id="Home">
-        <div class="header-elements" id="home-page" style="position: fixed;top: 0;left: 35%;">
-            <a href="#Home"><strong><span>Home</span></strong></a>
+        <div class="header-elements">
+            <a href="#"><strong><span>Home</span></strong></a>
             <a href="#abt"><strong>About</strong></a>
             <a href="#sks"><strong>Skills</strong></a>
             <a href="#pjcts"><strong>Projects</strong></a>
@@ -163,40 +317,36 @@ text-align: center;
         <button type="button" id="button-2"><a href="#">Contact</a></button>
     </section>
     <section class="ultimate-container" style="margin-top: 360px;">
-        <div class="cards-container" style="display: flex;flex-direction: column;align-items: center;">
-            <div class="card" id="abt" style="width: 1200px;text-align: left;">
-                <span style="text-align: center;"><h3>About Me</h3></span>
+        <div class="cards-container">
+            <div class="card" id="abt">
+                <h3>About Me</h3>
                 <details>
                     <summary>Read More</summary>
-                    <p>Étudiant en informatique passionné par l’innovation technologique, avec une solide maîtrise des bases en développement web. J’explore également le design graphique et suis habile avec les outils bureautiques.</p>
+                    <p>Étudiant en informatique passionné par l'innovation technologique, avec une solide maîtrise des bases en développement web. J'explore également le design graphique et suis habile avec les outils bureautiques.</p>
                 </details>
             </div>
-            <div class="card " id="sks" style="text-align: left;width: 1200px;">
-                <span style="text-align: center;"><h3>Skills</h3></span>
+            <div class="card" id="sks">
+                <h3>Skills</h3>
                 <details>
                     <summary>Read More</summary>
-                    <p>
-                        <ul>
-                            <li>HTML: Capable of structuring web pages with semantic tags and interactive elements.</li>
-                            <li>CSS: Expert in Flexbox, Grid, and creating responsive layouts.</li>
-                            <li>Graphic Design: Proficient in tools like Photoshop and Canva.</li>
-                            <li>Office Tools: Advanced skills in Word, Excel, and PowerPoint.</li>
-                            <li>Basic Networking: Knowledge of IP, DHCP, and configuring local networks.</li>
-                        </ul>
-                    </p>
+                    <ul>
+                        <li>HTML: Capable of structuring web pages with semantic tags and interactive elements.</li>
+                        <li>CSS: Expert in Flexbox, Grid, and creating responsive layouts.</li>
+                        <li>Graphic Design: Proficient in tools like Photoshop and Canva.</li>
+                        <li>Office Tools: Advanced skills in Word, Excel, and PowerPoint.</li>
+                        <li>Basic Networking: Knowledge of IP, DHCP, and configuring local networks.</li>
+                    </ul>
                 </details>
             </div>
-            <div class="card" id="pjcts" style="width: 1200px;text-align: left;">
-                <span style="text-align: center;"><h3>Projects</h3></span>
+            <div class="card" id="pjcts">
+                <h3>Projects</h3>
                 <details>
-                    <summary><span>Read More</span></summary>
-                    <p>
-                        <ul>
-                            <li>Website designs using HTML and CSS.</li>
-                            <li>Graphic design projects applying modern aesthetics.</li>
-                            <li>Automation using Excel and other office tools.</li>
-                        </ul>
-                    </p>
+                    <summary>Read More</summary>
+                    <ul>
+                        <li>Website designs using HTML and CSS.</li>
+                        <li>Graphic design projects applying modern aesthetics.</li>
+                        <li>Automation using Excel and other office tools.</li>
+                    </ul>
                 </details>
             </div>
         </div>
